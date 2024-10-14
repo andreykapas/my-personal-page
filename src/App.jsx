@@ -1,28 +1,22 @@
-import { useEffect, useState } from 'react';
+import Header from './components/Header.jsx';
+import About from './components/About.jsx';
+import Projects from './components/Projects.jsx';
+import Footer from './components/Footer.jsx';
+import './App.css';
 
 function App() {
-  const [message, setMessage] = useState('');
-
-  useEffect(() => {
-    fetch('http://localhost:3000/api/hello')
-      .then((res) => {
-        if (!res.ok) {
-          throw new Error('Network response was not ok');
-        }
-        return res.json();
-      })
-      .then((data) => {
-        setMessage(data.message);
-      })
-      .catch((error) => {
-        console.error('Fetch error:', error);
-        setMessage('Error loading message');
-      });
-  }, []);
-
   return (
-    <div>
-      <h1>{message ? message : 'Loading...'}</h1>
+    <div className="bg-gray-800 text-white p-4 w-full mt-auto">
+      <Header />
+      <main className="flex-grow">
+        <section id="about" className="py-10">
+          <About />
+        </section>
+        <section id="project" className="py-10 bg-white">
+          <Projects />
+        </section>
+      </main>
+      <Footer />
     </div>
   );
 }
