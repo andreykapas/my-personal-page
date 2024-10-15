@@ -12,6 +12,66 @@ body {
   overflow: hidden;
 }
 
+:root {
+  --bg-color: white;
+  --text-color: black;
+  --header-bg-color: #007acc;
+  --header-text-color: white;
+  --section-bg-color: #f9f9f9;
+}
+
+[data-theme='dark'] {
+  --bg-color: #1a202c;
+  --text-color: white;
+  --header-bg-color: #2d3748;
+  --header-text-color: white;
+  --section-bg-color: #2f3640;
+  --card-bg-color: #2d3748;
+  --card-border-color: #4a5568;
+}
+
+@layer base {
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition:
+      background-color 0.3s,
+      color 0.3s;
+  }
+}
+
+.header {
+  background-color: var(--header-bg-color);
+  color: var(--header-text-color);
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+}
+
+.about {
+  background-color: var(--section-bg-color);
+  color: var(--text-color);
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+}
+
+.projects {
+  background-color: var(--section-bg-color);
+  color: var(--text-color);
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+}
+
+.project-card {
+  background-color: var(--card-bg-color);
+  border-color: var(--card-border-color);
+  transition:
+    background-color 0.3s,
+    border-color 0.3s;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
