@@ -5,10 +5,12 @@ const handler = async (req, res) => {
 
   const projects = [
     {
+      id: 1,
       name: 'Project 1',
       link: 'https://github.com/andreykapas/word-analytics',
     },
     {
+      id: 2,
       name: 'Project 2',
       link: 'https://github.com/andreykapas/my-personal-page',
     },

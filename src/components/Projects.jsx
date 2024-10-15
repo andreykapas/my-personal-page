@@ -22,14 +22,14 @@ const Projects = () => {
   return (
     <section className="bg-white py-10">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-2xl md:text-3xl font-bold mb-6 text-gray-800 text-center">
+        <h2 className="text-2xl md:text-3xl font-bold mb-6 text-gray-800 text-center hover:text-blue-500 transition duration-300 ease-in-out">
           Projects
         </h2>
         <ul className="space-y-4">
-          {projects.map((p, index) => (
+          {projects.map((p) => (
             <li
-              key={index}
-              className="border-gray-100 p-4 sm:p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
+              key={p.id}
+              className="border-gray-100 p-4 sm:p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 hover:scale-105 transform hover:bg-gray-50"
             >
               <a
                 href={p.link}
