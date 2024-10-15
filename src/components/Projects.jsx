@@ -29,13 +29,17 @@ const Projects = () => {
           {projects.map((p) => (
             <li
               key={p.id}
-              className="project-card border p-4 sm:p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 hover:scale-105"
+              className={`project-card border p-4 sm:p-6 rounded-lg shadow-md
+                          hover:shadow-lg transition-shadow duration-300
+                          hover:scale-105`}
             >
               <a
                 href={p.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-500 hover:text-blue-700 font-semibold text-base md:text-lg transition-colors duration-300 ease-in-out"
+                className={`text-blue-500 hover:text-blue-700 font-semibold
+                            text-base md:text-lg transition-colors duration-300
+                            ease-in-out`}
               >
                 {p.name} - View on GitHub
               </a>
