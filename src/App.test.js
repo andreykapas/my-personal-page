@@ -16,6 +16,11 @@ test('renders hello world', async () => {
   expect(aboutSection).toBeInTheDocument();
 
   // Проверка на наличие раздела Projects
-  const projectsSection = await waitFor(() => screen.getByText(/Projects/i));
-  expect(projectsSection).toBeInTheDocument();
+  const projectsSections = await waitFor(() =>
+    screen.getAllByText(/Projects/i)
+  );
+  expect(projectsSections.length).toBeGreaterThan(0);
+  projectsSections.forEach((section) => {
+    expect(section).toBeInTheDocument();
+  });
 });

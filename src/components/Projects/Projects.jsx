@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import fetch from 'cross-fetch';
+import '../../styles/App.css';
 
 const Projects = () => {
   const [projects, setProjects] = useState([]);

@@ -18,6 +18,7 @@ body {
   --header-bg-color: #007acc;
   --header-text-color: white;
   --section-bg-color: #f9f9f9;
+  --link-hover-color: #ffeb3b;
 }
 
 [data-theme='dark'] {
@@ -28,6 +29,7 @@ body {
   --section-bg-color: #2f3640;
   --card-bg-color: #2d3748;
   --card-border-color: #4a5568;
+  --link-hover-color: #ffeb3b;
 }
 
 @layer base {
@@ -48,14 +50,7 @@ body {
     color 0.3s;
 }
 
-.about {
-  background-color: var(--section-bg-color);
-  color: var(--text-color);
-  transition:
-    background-color 0.3s,
-    color 0.3s;
-}
-
+.about,
 .projects {
   background-color: var(--section-bg-color);
   color: var(--text-color);
@@ -64,12 +59,25 @@ body {
     color 0.3s;
 }
 
+.about p {
+  text-align: justify;
+}
+
+a {
+  color: var(--text-color);
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--link-hover-color);
+}
+
 .project-card {
   background-color: var(--card-bg-color);
   border-color: var(--card-border-color);
   transition:
-    background-color 0.3s,
-    border-color 0.3s;
+    background-color 0.3s ease,
+    border-color 0.3s ease;
 }
 
 @tailwind base;
