@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import Header from './Header';
-import { ThemeContext } from '../context/ThemeContext.jsx';
+import Header from './Header.jsx';
+import { ThemeContext } from '../../context/ThemeContext.jsx';
 
 test('renders the header with correct text', () => {
   const mockThemeContextValue = {

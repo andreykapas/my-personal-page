@@ -1,6 +1,6 @@
 import { render, screen, waitFor } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import Projects from './Projects';
+import Projects from './Projects.jsx';
 
 test('renders the Projects section with GitHub links', async () => {
   render(<Projects />);
